@@ -1,0 +1,44 @@
+3 20
+965254
+351242
+77792
+
+Order: 3 1 2 
+77792
+965254
+351242
+
+i = 0
+_input = 77792
+a = None
+rootNode = None
+
+b = None
+rootNode = None
+
+rootNode = {key = 77792, priority = 3456, size = 1} 
+
+i = 1
+_input = 965254
+
+a = {key = 77792, priority = 3456, size = 1}
+rootNode = None
+
+b = None
+rootNode = None
+
+rootNode = {key = 965254, priority = 4563, size = 1}
+
+rootNode = {key = 77792, priority = 3456, size = 1, right = {key = 965254, priority = 4563, size = 1}}
+
+i = 3
+
+_input = 351242
+
+
+
+3 20
+965254
+351242
+77792
+88962
