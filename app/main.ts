@@ -44,21 +44,16 @@ function sort(sequence: number[]): number[] {
         console.log('EQUAL!')
         return 0;
     });
-    let k = 1;
     for (let i = 0; i < itemSequence.length; i++) {
-        if (k > 675) {
-            k = 1;
-        }
-        itemSequence[i].size = k;
-        itemSequence02.set(itemSequence[i].val, itemSequence[i].size);
-        k++;
+        itemSequence[i].size = i;
+        itemSequence02.set(itemSequence[i].index, itemSequence[i].size);
     }
 
-    console.log(itemSequence);
+    console.log(itemSequence02);
 
     let x: any = 0;
-    for (let i = 0; i < sequence.length; i++) {
-        x = itemSequence02.get(sequence[i]);
+    for (let i = 1; i < sequence.length; i++) {
+        x = itemSequence02.get(i);
         output.push(x);
     }
     return output;
