@@ -36,26 +36,23 @@ function sort(sequence: number[]): number[] {
     }
     itemSequence.sort((a, b) => {
         if (a.val < b.val) {
-            return -1;
+            return 1;
         }
         if (a.val > b.val) {
-            return 1;
+            return -1;
         }
         console.log('EQUAL!')
         return 0;
     });
-
-    for (let i = 0; i < sequence.length; i++) {
-        if (i % 2 === 0) {
-            itemSequence[i].size = 1000;
-            itemSequence02.set(itemSequence[i].val, itemSequence[i].size);
-        } else {
-            itemSequence[i].size = 10 + i;
-            itemSequence02.set(itemSequence[i].val, itemSequence[i].size);
+    let k = 1;
+    for (let i = 0; i < itemSequence.length; i++) {
+        if (k > 675) {
+            k = 1;
         }
-
+        itemSequence[i].size = k;
+        itemSequence02.set(itemSequence[i].val, itemSequence[i].size);
+        k++;
     }
-
 
     console.log(itemSequence);
 
